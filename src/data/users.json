@@ -1,21 +1,22 @@
 [
-    {
-      "nome": "Susan",
-      "bairro":"tucuruvi",
-      "cidade": "sao paulo",
-      "avaliacao": 5,
-      "imagem": "https://www.istockphoto.com/br/foto/mulher-afro-americana-est%C3%A1-brincando-com-seu-filhote-de-buldogue-franc%C3%AAs-enquanto-gm1425107939-469657601",
-      "äceita-gato": true,
-      "aceita cao":true
-    },
-
-    {
-     "nome": "Gisele",
-      "bairro":"real",
-      "cidade": "sao paulo",
-      "avaliacao": 5,
-      "imagem": "https://www.istockphoto.com/br/foto/mulher-feliz-brincando-com-seu-cachorro-no-sof%C3%A1-em-casa-gm1437652481-478385447",
-      "äceita-gato": false,
-      "aceita cao":true
-    }
-  ]
+  {
+    "id": 1,
+    "nome": "Susan",
+    "bairro": "tucuruvi",
+    "cidade": "sao paulo",
+    "avaliacao": 5,
+    "imagem": "https://www.istockphoto.com/br/foto/mulher-afro-americana-est%C3%A1-brincando-com-seu-filhote-de-buldogue-franc%C3%AAs-enquanto-gm1425107939-469657601",
+    "aceita-gato": true,
+    "aceita-cao": true
+  },
+  {
+    "id": 2,
+    "nome": "Gisele",
+    "bairro": "real",
+    "cidade": "sao paulo",
+    "avaliacao": 5,
+    "imagem": "https://www.istockphoto.com/br/foto/mulher-feliz-brincando-com-seu-cachorro-no-sof%C3%A1-em-casa-gm1437652481-478385447",
+    "aceita-gato": false,
+    "aceita-cao": true
+  }
+]
