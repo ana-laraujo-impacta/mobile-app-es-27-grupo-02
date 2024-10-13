@@ -1,6 +1,7 @@
 import { Injectable, UnauthorizedException, Logger } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UserService } from '../user/user.service';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
@@ -9,13 +10,13 @@ export class AuthService {
     constructor(
         private readonly userService: UserService,
         private readonly jwtService: JwtService
-    ) {}
+    ) { }
 
     public async signIn(username: string, password: string) {
-        this.logger.log(`Tentativa de login: username=${username}, password=${password}`);
+        this.logger.log(`Tentativa de login: username=${username}`);
         const user = await this.userService.getByUsername(username);
 
-        if (!user || user.password !== password) {
+        if (!user || !(await bcrypt.compare(password, user.password))) {
             this.logger.warn(`Falha de login: usuário não encontrado ou senha inválida`);
             throw new UnauthorizedException('Invalid login!');
         }
@@ -30,4 +31,3 @@ export class AuthService {
         };
     }
 }
-
