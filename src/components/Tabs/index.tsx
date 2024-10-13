@@ -1,8 +1,9 @@
 import React from 'react';
-import ListSearchScreen from '../../screens/ListSearchScreen';
-import HomeScreen from '../../screens/HomeScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import ListSearchScreen from '../../screens/ListSearch/ListSearchScreen';
+import HomeScreen from '../../screens/Home/HomeScreen';
+import Developing from '../Developing';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,7 +36,7 @@ const Tabs = () => (
     >
         <Tab.Screen name="Início" component={HomeScreen} />
         <Tab.Screen name="Busca" component={ListSearchScreen} />
-        <Tab.Screen name="Menu" component={HomeScreen} />
+        <Tab.Screen name="Menu" component={Developing} />
     </Tab.Navigator>
 
 );

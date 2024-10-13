@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SplashScreen from '../screens/SplashScreen';
-import LoginScreen from '../screens/LoginScreen';
-import ListSearchScreen from '../screens/ListSearchScreen';
-import Tabs from 'src/components/Tabs/Tabs';
+import SplashScreen from '../screens/Splash/SplashScreen';
+import LoginScreen from '../screens/Login/LoginScreen';
+import ListSearchScreen from '../screens/ListSearch/ListSearchScreen';
+import Tabs from 'src/components/Tabs';
+import Developing from 'src/components/Developing';
 
 const Stack = createStackNavigator();
 
@@ -23,15 +24,17 @@ const AppNavigator = () => {
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen
-                    name="ListSearch"
+                    name="Busca"
                     component={ListSearchScreen}
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen
-                    name="Home"
+                    name="Início"
                     component={Tabs}
                     options={{ headerShown: false }}
                 />
+                <Stack.Screen name="Developing" component={Developing} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );

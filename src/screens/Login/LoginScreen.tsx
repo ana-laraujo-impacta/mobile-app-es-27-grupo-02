@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, Alert } from 'react-native';
 import axios from 'axios';
-import ButtonComponent from '../components/Button/index';
-import { loginCss } from './Global';
 import { useNavigation } from '@react-navigation/native';
+import ButtonComponent from '../../components/Button/index';
+import { styles } from './styles';
 
 const LoginScreen: React.FC = () => {
     const navigation = useNavigation();
+    
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -19,7 +20,7 @@ const LoginScreen: React.FC = () => {
 
             Alert.alert('Login bem-sucedido!');
 
-            navigation.navigate('Home');
+            navigation.navigate('Início');
         } catch (error) {
             console.error('Erro ao fazer login:', error);
             Alert.alert('Erro ao fazer login', error.response ? error.response.data.message : 'Usuário ou senha incorretos.');
@@ -27,24 +28,24 @@ const LoginScreen: React.FC = () => {
     };
 
     const handleForgotPassword = () => {
-        console.log('Forgot password pressed');
+        navigation.navigate('Developing');
     };
 
     const handleCreateAccount = () => {
-        console.log('Create account pressed');
+        navigation.navigate('Developing');
     };
 
     return (
-        <View style={loginCss.container}>
-            <View style={loginCss.logoContainer}>
-                <Image source={require('../image/logo.png')} />
+        <View style={styles.container}>
+            <View style={styles.logoContainer}>
+                <Image source={require('../../image/logo.png')} />
             </View>
 
-            <Text style={loginCss.title}>Entre ou crie sua conta</Text>
-            <Text style={loginCss.subtitle}>Garanta o bem estar do seu Pet</Text>
+            <Text style={styles.title}>Entre ou crie sua conta</Text>
+            <Text style={styles.subtitle}>Garanta o bem estar do seu Pet</Text>
 
             <TextInput
-                style={loginCss.input}
+                style={styles.input}
                 placeholder="Seu nome de usuário"
                 autoCapitalize="none"
                 value={username}
@@ -52,7 +53,7 @@ const LoginScreen: React.FC = () => {
             />
 
             <TextInput
-                style={loginCss.input}
+                style={styles.input}
                 placeholder="Sua senha"
                 secureTextEntry
                 value={password}
@@ -67,20 +68,20 @@ const LoginScreen: React.FC = () => {
             />
 
             <TouchableOpacity onPress={handleForgotPassword}>
-                <Text style={loginCss.forgotPasswordText}>Esqueci minha senha</Text>
+                <Text style={styles.forgotPasswordText}>Esqueci minha senha</Text>
             </TouchableOpacity>
 
-            <View style={loginCss.dividerContainer}>
-                <View style={loginCss.line} />
-                <Text style={loginCss.dividerText}>OU</Text>
-                <View style={loginCss.line} />
+            <View style={styles.dividerContainer}>
+                <View style={styles.line} />
+                <Text style={styles.dividerText}>OU</Text>
+                <View style={styles.line} />
             </View>
 
             <TouchableOpacity
-                style={loginCss.createAccountButton}
+                style={styles.createAccountButton}
                 onPress={handleCreateAccount}
             >
-                <Text style={loginCss.createAccountText}>Criar conta</Text>
+                <Text style={styles.createAccountText}>Criar conta</Text>
             </TouchableOpacity>
         </View>
     );

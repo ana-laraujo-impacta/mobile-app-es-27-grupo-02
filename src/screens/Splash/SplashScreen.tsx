@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { styles } from './Global';
-import ButtonComponent from '../components/Button/index';
+import ButtonComponent from '../../components/Button/index';
+import { styles } from './styles';
 
 const SplashScreen: React.FC = () => {
     const navigation = useNavigation();
@@ -13,7 +13,7 @@ const SplashScreen: React.FC = () => {
 
     return (
         <View style={styles.container}>
-            <Image source={require('../image/logo.png')} style={styles.image} />
+            <Image source={require('../../image/logo.png')} style={styles.image} />
             <View style={styles.buttonContainer}>
                 <ButtonComponent title="Continuar" onPress={handleContinue} backgroundColor="#FF40A7" />
             </View>
