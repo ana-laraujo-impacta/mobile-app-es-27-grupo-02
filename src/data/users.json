@@ -5,7 +5,7 @@
     "bairro": "tucuruvi",
     "cidade": "sao paulo",
     "avaliacao": 5,
-    "imagem": "https://www.istockphoto.com/br/foto/mulher-afro-americana-est%C3%A1-brincando-com-seu-filhote-de-buldogue-franc%C3%AAs-enquanto-gm1425107939-469657601",
+    "imagem": "../image/susan.jpg",
     "aceita-gato": true,
     "aceita-cao": true
   },
@@ -15,7 +15,7 @@
     "bairro": "real",
     "cidade": "sao paulo",
     "avaliacao": 5,
-    "imagem": "https://www.istockphoto.com/br/foto/mulher-feliz-brincando-com-seu-cachorro-no-sof%C3%A1-em-casa-gm1437652481-478385447",
+    "imagem": "../image/gisele.jpg",
     "aceita-gato": false,
     "aceita-cao": true
   }

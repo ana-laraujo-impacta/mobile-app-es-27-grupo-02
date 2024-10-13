@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { styles } from './Global';
 import ButtonComponent from '../components/Button/index';
-import { useNavigation } from '@react-navigation/native';
 
 const SplashScreen: React.FC = () => {
     const navigation = useNavigation();
