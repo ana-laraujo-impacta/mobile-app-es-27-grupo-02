@@ -20,4 +20,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center', // Alinha os itens no centro verticalmente
   },
 });
-
